@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Смурфик</title>
+        <!--CSS-->
+		<link rel="stylesheet" href="/pages/css/style.css" type="text/css">
+		<!--Animate-->
+		<link rel="stylesheet" href="/pages/css/animate.min.css">
+		<!--Bootstrap CSS-->
+		<link href="/pages/css/bootstrap.min.css" rel="stylesheet" >
+        <!--Icon Tab-->
+		<link rel="icon" type="image/png" href="/pages/img/icon-logo.png" />
+    </head>
+    <body>
+
+        
+        <div class="header container">
+            <div class="row align-items-center">
+                <div class="slogan col">
+                    <p class="text-uppercase">Строительно-монтаженое<br>Управление</p>
+                </div>
+                <div class="logo col">
+                    <a class="navbar-brand m-0 text-center" href="/">
+                        <img src="/pages/img/logo.png" alt="logo">
+                        <div class="slogan text-start">
+                            <h1 class="text-uppercase">Смурфик</h1>
+                        </div> 
+                    </a>
+                </div>
+                <div class="phone col text-end d-flex justify-content-end">
+                    <div class="icon-phone">
+                        <img class="d-flex" src="/pages/img/phone.svg" alt="phone">
+                    </div>
+                    <p class="d-flex align-items-center justify-content-end">+7 909 535 44 49</p>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="logo">
+                    <a class="navbar-brand m-0 text-center" href="/">
+                        <img src="/pages/img/logo.png" alt="logo">
+                        <div class="slogan text-start">
+                            <h1 class="text-uppercase">Смурфик</h1>
+                        </div> 
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <img src="/pages/img/list.svg" alt="menu">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto w-100 justify-content-center">
+                        <li class="nav-item me-2 ms-2">
+                            <a class="nav-link" href="/admin/services">Услуги</a>
+                        </li>
+                        <li class="nav-item me-2 ms-2">
+                            <a class="nav-link active" href="/admin/feedback">Обращения</a>
+                        </li>
+                        <li class="nav-item me-2 ms-2">
+                            <a class="exit nav-link"><button onclick="logout()">Выйти</button></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="bg-feedback">
+            <div class="container d-flex justify-content-center align-items-center h-100">
+                <div class="title-block">
+                    <h1 class="text-uppercase">Обращения</h1>
+                </div>
+            </div>
+        </div>
+
+          <div class="about-request">
+            <div class="container">
+                <div class="title-block">
+                    <h1 class="text-uppercase">Обращения</h1>
+                </div>
+                <div class="row" id="feedbacks">
+                </div>
+              </div>
+          </div>
+
+          <footer>
+            <div class="footer container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <a class="navbar-brand m-0 text-center" href="/">
+                            <img src="/pages/img/logo.png" alt="logo">
+                            <div class="slogan text-start">
+                                <h1 class="text-uppercase">Смурфик</h1>
+                            </div> 
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="navbar-nav m-auto ">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/company">О нас</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/services">Услуги</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/portfolio">Портфолио</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/feedback">Обратная связь</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/contact">Контакты</a>
+                            </li>
+                          </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="title-block">
+                            <h1 class="text-uppercase text-center">Социальные сети</h1>
+                        </div>
+                        <div class="social-icon">
+                            <div class="icon">
+                                <a href="#">
+                                    <img src="/pages/img/telegram.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="#">
+                                    <img src="/pages/img/discord.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="#">
+                                    <img src="/pages/img/twitch.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <h1 class="text-center">© Copyright, Смурфик 2023.</h1>
+                    </div>
+                </div>
+              </div>
+          </footer>
+    </body>
+    <!--JQuery link-->
+	<script src="/pages/js/jquery.js"></script>
+	<!--Bootstrap JS-->
+	<script src="/pages/js/bootstrap.bundle.min.js"></script>
+	<!--JS-->
+	<script src="/pages/js/script.js"></script>
+    <script>
+        isAuthorized();
+        isAdmin();
+        getFeedbacks();
+    </script>
+</html>

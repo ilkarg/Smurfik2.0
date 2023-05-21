@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Смурфик</title>
+        <!--CSS-->
+		<link rel="stylesheet" href="/pages/css/style.css" type="text/css">
+		<!--Animate-->
+		<link rel="stylesheet" href="/pages/css/animate.min.css">
+		<!--Bootstrap CSS-->
+		<link href="/pages/css/bootstrap.min.css" rel="stylesheet" >
+        <!--Icon Tab-->
+		<link rel="icon" type="image/png" href="/pages/img/icon-logo.png" />
+    </head>
+    <body>
+
+        
+        <div class="header container">
+            <div class="row align-items-center">
+                <div class="slogan col">
+                    <p class="text-uppercase">Строительно-монтаженое<br>Управление</p>
+                </div>
+                <div class="logo col">
+                    <a class="navbar-brand m-0 text-center" href="/">
+                        <img src="/pages/img/logo.png" alt="logo">
+                        <div class="slogan text-start">
+                            <h1 class="text-uppercase">Смурфик</h1>
+                        </div> 
+                    </a>
+                </div>
+                <div class="phone col text-end d-flex justify-content-end">
+                    <div class="icon-phone">
+                        <img class="d-flex" src="/pages/img/phone.svg" alt="phone">
+                    </div>
+                    <p class="d-flex align-items-center justify-content-end">+7 909 535 44 49</p>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="logo">
+                    <a class="navbar-brand m-0 text-center" href="/">
+                        <img src="/pages/img/logo.png" alt="logo">
+                        <div class="slogan text-start">
+                            <h1 class="text-uppercase">Смурфик</h1>
+                        </div> 
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <img src="/pages/img/list.svg" alt="menu">
+                    </span>
+                  </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto w-100 justify-content-between">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">Главная</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/company">О нас</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/services">Услуги</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/portfolio">Портфолио</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/feedback">Обратная связь</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contact">Контакты</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" id="authButton"><button id="button" onclick="logout()">Выйти</button></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <div class="bg-services">
+                <div class="container d-flex justify-content-center align-items-center h-100">
+                    <div class="title-block">
+                        <h1 class="text-uppercase">Наши услуги</h1>
+                    </div>
+                </div>
+          </div>
+
+        <div class="services-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="title-block">
+                            <h1 class="text-uppercase">Водоснабжение</h1>
+                        </div>
+                        <div class="services-block">
+                            <p>Мы выполним монтаж системы «с нуля» или капитальную замену водопроводных труб, системы отведения стоков, отопления. Лучше всего планировать монтаж систем водоснабжения и водоотведения на начальные этапы строительства. Если же постройки уже существуют, наши специалисты разработают оптимальные решения в зависимости от конкретных условий.</p>
+                        </div>
+                        <div class="application text-start mb-4">
+                            <button type="button" class="btn d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Заказать</button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title text-center" id="exampleModalLabel">Заказать</h5>
+                                                </div>
+                                                <div class="modal-body p-0">
+                                                    <div id="addPostForm" style="visibility: visible">
+                                                        <div class="create-input">
+                                                            <input name="request" type="text" id="orderName" placeholder="Имя">
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input type="tel" placeholder="Телефон" id="orderPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer text-center">
+                                                    <button type="button" onclick="addOrder('Водоснабжение')" class="btn d-block me-auto">Заказать</button>
+                                                    <button type="button" class="order btn btn-modal-close" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="company-img">
+                            <img src="/pages/img/22.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="services-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="title-block">
+                            <h1 class="text-uppercase">Канализация</h1>
+                        </div>
+                        <div class="services-block">
+                            <p>При строительстве и проектировании частного дома или коттеджа, важной составляющей является монтаж канализационных систем. Разумный хозяин всегда выберет опытных и квалифицированных профессионалов по установке канализации. Наша компания - это лидер на рынке монтажа систем коммуникаций в помещениях. При строительстве и проектировании частного дома или коттеджа, важной составляющей является монтаж канализационных систем. Разумный хозяин всегда выберет опытных и квалифицированных профессионалов по установке канализации.</p>
+                        </div>
+                        <div class="application text-start mb-4">
+                            <button type="button" class="btn d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Заказать</button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title text-center" id="exampleModalLabel">Заказать</h5>
+                                                </div>
+                                                <div class="modal-body p-0">
+                                                    <div id="addPostForm" style="visibility: visible">
+                                                        <div class="create-input">
+                                                            <input name="request" type="text" id="orderName" placeholder="Имя">
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input type="tel" placeholder="Телефон" id="orderPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer text-center">
+                                                    <button type="button" onclick="addOrder('Канализация')" class="btn d-block me-auto">Заказать</button>
+                                                    <button type="button" class="order btn btn-modal-close" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="company-img">
+                            <img src="/pages/img/23.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+          <div class="services-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="title-block">
+                            <h1 class="text-uppercase">Межевание</h1>
+                        </div>
+                        <div class="services-block">
+                            <p>Межевание представляет собой работы по определению границ участка и их документирование с последующей регистрацией в соответствующих гос. органах. Данная процедура является добровольной, но становится необходимой, когда нужно провести операции, где нужно уточнить зафиксированные границы и сведения о площади, а также для проведения мероприятий для увязки информации об участке с картой местности и корректного юридического оформления результатов процедуры.</p>
+                        </div>
+                        <div class="application text-start mb-4">
+                            <button type="button" class="btn d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Заказать</button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title text-center" id="exampleModalLabel">Заказать</h5>
+                                                </div>
+                                                <div class="modal-body p-0">
+                                                    <div id="addPostForm" style="visibility: visible">
+                                                        <div class="create-input">
+                                                            <input name="request" type="text" id="orderName" placeholder="Имя">
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input type="tel" placeholder="Телефон" id="orderPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer text-center">
+                                                    <button type="button" onclick="addOrder('Межевание')" class="btn d-block me-auto">Заказать</button>
+                                                    <button type="button" class="order btn-modal-close" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="company-img">
+                            <img src="/pages/img/24.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="services-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="title-block">
+                            <h1 class="text-uppercase">Изыскания</h1>
+                        </div>
+                        <div class="services-block">
+                            <p>Геодезические изыскания - это комплекс высокоточных измерений земельного участка для дальнейшей обработки и получения плана или карты объекта с инженерными коммуницациями и отображением ситуации на местности. Всё это сильно повысит рентабельность строительства за счёт полученных данных и технической документации о сооружениях и рельефе, поэтому в большинстве случаев данная процедура несёт большую выгоду.</p>
+                        </div>
+                        <div class="application text-start mb-4">
+                            <button type="button" class="btn d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Заказать</button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title text-center" id="exampleModalLabel">Заказать</h5>
+                                                </div>
+                                                <div class="modal-body p-0">
+                                                    <div id="addPostForm" style="visibility: visible">
+                                                        <div class="create-input">
+                                                            <input name="request" type="text" id="orderName" placeholder="Имя">
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input type="tel" placeholder="Телефон" id="orderPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer text-center">
+                                                    <button type="button" onclick="addOrder('Изыскания')" class="btn d-block me-auto">Заказать</button>
+                                                    <button type="button" class="order btn-modal-close" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="company-img">
+                            <img src="/pages/img/25.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="services-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="title-block">
+                            <h1 class="text-uppercase">Согласование</h1>
+                        </div>
+                        <div class="services-block">
+                            <p>МЫ проводим нужные работы до точки подключения. На своём участке вы самостоятельно организуете прокладку сетей водоснабжения и водоотведения. Мы также можем провести сети на самом участке и подключить их. Условия таких работ оговариваются отдельно и выполняются в рамках дополнительного договора.</p>
+                        </div>
+                        <div class="application text-start mb-4">
+                            <button type="button" class="btn d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Заказать</button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title text-center" id="exampleModalLabel">Заказать</h5>
+                                                </div>
+                                                <div class="modal-body p-0">
+                                                    <div id="addPostForm" style="visibility: visible">
+                                                        <div class="create-input">
+                                                            <input name="request" type="text" id="orderName" placeholder="Имя">
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input type="tel" placeholder="Телефон" id="orderPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer text-center">
+                                                    <button type="button" onclick="addOrder('Согласование')" class="btn d-block me-auto">Заказать</button>
+                                                    <button type="button" class="order btn-modal-close" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="company-img">
+                            <img src="/pages/img/26.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="services-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="title-block">
+                            <h1 class="text-uppercase">Введение в эксплутацию</h1>
+                        </div>
+                        <div class="services-block">
+                            <p>При завершении строительства или реконструкции дома выполняется специальная процедура – ввод этого объекта в эксплуатацию. В ходе ее проведения домовладелец получает специальный документ. Для оформления такой бумаги нужно разрешение на ввод данной постройки. Его получить можно в Госстройнадзоре. Когда оно будет на руках, получится поставить недвижимость на кадастровый учет.</p>
+                        </div>
+                        <div class="application text-start mb-4">
+                            <button type="button" class="btn d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Заказать</button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title text-center" id="exampleModalLabel">Заказать</h5>
+                                                </div>
+                                                <div class="modal-body p-0">
+                                                    <div id="addOrderForm" style="visibility: visible">
+                                                        <div class="create-input">
+                                                            <input name="request" type="text" id="orderName" placeholder="Имя">
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input type="tel" placeholder="Телефон" id="order" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer text-center">
+                                                    <button type="button" onclick="addOrder('Введение в эксплуатацию')" class="btn d-block me-auto">Заказать</button>
+                                                    <button type="button" class="order btn-modal-close" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="company-img">
+                            <img src="/pages/img/27.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+
+
+
+          <div class="about-request">
+            <div class="container">
+                <div class="title-block">
+                    <h1 class="text-uppercase">Обратная связь</h1>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="request-input">
+                            <input name="request" type="text" id="feedbackName" placeholder="Имя">
+                        </div>
+                        <div class="request-input">
+                            <input type="tel" placeholder="Телефон" id="feedbackPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                        </div>
+                        <div class="request-input">
+                            <input name="request" type="text" id="feedbackQuestion" placeholder="Напишите ваш вопрос">
+                        </div>
+                        <div class="request text-start d-lg-flex d-md-block align-items-center">
+                            <button type="button" class="order btn" onclick="addFeedback()">Отправить</button>
+                            <div class="request text-start">
+                                <p>Нажимая «Отправить» вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-lg-block d-none">
+                        <div class="company-img">
+                            <img src="/pages/img/10.jpg" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+              </div>
+          </div>
+
+          <footer>
+            <div class="footer container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <a class="navbar-brand m-0 text-center" href="/">
+                            <img src="/pages/img/logo.png" alt="logo">
+                            <div class="slogan text-start">
+                                <h1 class="text-uppercase">Смурфик</h1>
+                            </div> 
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="navbar-nav m-auto ">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/company">О нас</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/services">Услуги</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/portfolio">Портфолио</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/feedback">Обратная связь</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/contact">Контакты</a>
+                            </li>
+                          </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="title-block">
+                            <h1 class="text-uppercase text-center">Социальные сети</h1>
+                        </div>
+                        <div class="social-icon">
+                            <div class="icon">
+                                <a href="#">
+                                    <img src="/pages/img/telegram.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="#">
+                                    <img src="/pages/img/discord.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="#">
+                                    <img src="/pages/img/twitch.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <h1 class="text-center">© Copyright, Смурфик 2023.</h1>
+                    </div>
+                </div>
+              </div>
+          </footer>
+    </body>
+    <!--JQuery link-->
+	<script src="/pages/js/jquery.js"></script>
+	<!--Bootstrap JS-->
+	<script src="/pages/js/bootstrap.bundle.min.js"></script>
+	<!--JS-->
+	<script src="/pages/js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            isAuthorized();
+        });
+    </script>
+</html>

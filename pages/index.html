@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Смурфик</title>
+        <!--CSS-->
+		<link rel="stylesheet" href="/pages/css/style.css" type="text/css">
+		<!--Animate-->
+		<link rel="stylesheet" href="/pages/css/animate.min.css">
+		<!--Bootstrap CSS-->
+		<link href="/pages/css/bootstrap.min.css" rel="stylesheet" >
+        <!--Icon Tab-->
+		<link rel="icon" type="image/png" href="/pages/img/icon-logo.png" />
+    </head>
+    <body>
+
+        
+        <div class="header container">
+            <div class="row align-items-center">
+                <div class="slogan col">
+                    <p class="text-uppercase">Строительно-монтаженое<br>Управление</p>
+                </div>
+                <div class="logo col">
+                    <a class="navbar-brand m-0 text-center" href="/">
+                        <img src="/pages/img/logo.png" alt="logo">
+                        <div class="slogan text-start">
+                            <h1 class="text-uppercase">Смурфик</h1>
+                        </div> 
+                    </a>
+                </div>
+                <div class="phone col text-end d-flex justify-content-end">
+                    <div class="icon-phone">
+                        <img class="d-flex" src="/pages/img/phone.svg" alt="phone">
+                    </div>
+                    <p class="d-flex align-items-center justify-content-end">+7 909 535 44 49</p>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="logo">
+                    <a class="navbar-brand m-0 text-center" href="/">
+                        <img src="/pages/img/logo.png" alt="logo">
+                        <div class="slogan text-start">
+                            <h1 class="text-uppercase">Смурфик</h1>
+                        </div> 
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <img src="/pages/img/list.svg" alt="menu">
+                    </span>
+                  </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto w-100 justify-content-between">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/company">О нас</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/services">Услуги</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/portfolio">Портфолио</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/feedback">Обратная связь</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact">Контакты</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="authButton"><button id="button" onclick="logout()">Выйти</button></a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+          </nav>
+
+          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item slide-1 active">
+                <img src="/pages/img/1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block text-start">
+                  <h5 class="text-start">Инженерные сети</h5>
+                  <p class="text-start">Монтаж водопровода, канализации</p>
+                  <a href="/services">
+                    <button type="button" class="btn">Узнать больше</button>
+                  </a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/pages/img/2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block text-start">
+                  <h5 class="text-start">Мы рады вам помочь</h5>
+                  <p class="text-start">В проведению водопровода и канализации методом ГНБ</p>
+                  <a href="/services">
+                    <button type="button" class="btn">Узнать больше</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Следующий</span>
+            </button>
+          </div>
+
+          <div class="services container">
+            <div class="row">
+                <div class="title-block">
+                    <h1 class="text-uppercase">Наши услуги</h1>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="services-block">
+                            <div class="img-block">
+                                <img src="/pages/img/3.jpg" alt="">
+                                <div class="title-services">
+                                    <h1 class="text-center">Водоснабжение</h1>
+                                </div>
+                                <div class="more text-center">
+                                    <button type="button" class="btn d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Заказать</button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title text-center" id="exampleModalLabel">Заказать</h5>
+                                                </div>
+                                                <div class="modal-body p-0">
+                                                    <div id="addPostForm" style="visibility: visible">
+                                                        <div class="create-input">
+                                                            <input name="request" type="text" id="orderName" placeholder="Имя">
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input type="tel" placeholder="Телефон" id="orderPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer text-center">
+                                                    <button type="button" onclick="addOrder('Водоснабжение')" class="btn d-block">Заказать</button>
+                                                    <button type="button" class="order btn btn-modal-close" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="/services">
+                                        <button type="button" class="order btn">Подробнее</button>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="services-block">
+                            <div class="img-block">
+                                <img src="/pages/img/4.jpg" alt="">
+                                <div class="title-services">
+                                    <h1 class="text-center">Канализация</h1>
+                                </div>
+                                <div class="more text-center">
+                                    <button type="button" class="btn d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Заказать</button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title text-center" id="exampleModalLabel">Заказать</h5>
+                                                </div>
+                                                <div class="modal-body p-0">
+                                                    <div id="addPostForm" style="visibility: visible">
+                                                        <div class="create-input">
+                                                            <input name="request" type="text" id="orderName" placeholder="Имя">
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input type="tel" placeholder="Телефон" id="orderPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer text-center">
+                                                    <button type="button" onclick="addOrder('Канализация')" class="btn d-block">Заказать</button>
+                                                    <button type="button" class="order btn btn-modal-close" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="/services">
+                                        <button type="button" class="order btn">Подробнее</button>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="services-block">
+                            <div class="img-block">
+                                <img src="/pages/img/5.jpg" alt="">
+                                <div class="title-services">
+                                    <h1 class="text-center">Межевание</h1>
+                                </div>
+                                <div class="more text-center">
+                                    <button type="button" class="btn d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Заказать</button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title text-center" id="exampleModalLabel">Заказать</h5>
+                                                </div>
+                                                <div class="modal-body p-0">
+                                                    <div id="addPostForm" style="visibility: visible">
+                                                        <div class="create-input">
+                                                            <input name="request" type="text" id="orderName" placeholder="Имя">
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input type="tel" placeholder="Телефон" id="orderPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer text-center">
+                                                    <button type="button" onclick="addOrder('Межевание')" class="btn d-block">Заказать</button>
+                                                    <button type="button" class="order btn btn-modal-close" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="/services">
+                                        <button type="button" class="order btn">Подробнее</button>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="services-block">
+                            <div class="img-block">
+                                <img src="/pages/img/6.jpg" alt="">
+                                <div class="title-services">
+                                    <h1 class="text-center">Изыскания</h1>
+                                </div>
+                                <div class="more text-center">
+                                    <button type="button" class="btn d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Заказать</button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title text-center" id="exampleModalLabel">Заказать</h5>
+                                                </div>
+                                                <div class="modal-body p-0">
+                                                    <div id="addPostForm" style="visibility: visible">
+                                                        <div class="create-input">
+                                                            <input name="request" type="text" id="orderName" placeholder="Имя">
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input type="tel" placeholder="Телефон" id="orderPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer text-center">
+                                                    <button type="button" onclick="addOrder('Изыскания')" class="btn d-block">Заказать</button>
+                                                    <button type="button" class="order btn btn-modal-close" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="/services">
+                                        <button type="button" class="order btn">Подробнее</button>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="services-block">
+                            <div class="img-block">
+                                <img src="/pages/img/7.jpg" alt="">
+                                <div class="title-services">
+                                    <h1 class="text-center">Согласования</h1>
+                                </div>
+                                <div class="more text-center">
+                                    <button type="button" class="btn d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Заказать</button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title text-center" id="exampleModalLabel">Заказать</h5>
+                                                </div>
+                                                <div class="modal-body p-0">
+                                                    <div id="addPostForm" style="visibility: visible">
+                                                        <div class="create-input">
+                                                            <input name="request" type="text" id="orderName" placeholder="Имя">
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input type="tel" placeholder="Телефон" id="orderPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer text-center">
+                                                    <button type="button" onclick="addOrder('Согласования')" class="btn d-block">Заказать</button>
+                                                    <button type="button" class="order btn btn-modal-close" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="/services">
+                                        <button type="button" class="order btn">Подробнее</button>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="services-block">
+                            <div class="img-block">
+                                <img src="/pages/img/8.jpg" alt="">
+                                <div class="title-services">
+                                    <h1 class="text-center">Эксплуатация</h1>
+                                </div>
+                                <div class="more text-center">
+                                    <button type="button" class="btn d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">Заказать</button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title text-center" id="exampleModalLabel">Заказать</h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div id="addPostForm" style="visibility: visible">
+                                                        <div class="create-input">
+                                                            <input name="request" type="text" id="orderName" placeholder="Имя">
+                                                        </div>
+                                                        <div class="create-input">
+                                                            <input type="tel" placeholder="Телефон" id="orderPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer text-center">
+                                                    <button type="button" onclick="addOrder('Эксплуатация')" class="btn d-block">Заказать</button>
+                                                    <button type="button" class="order btn btn-modal-close" data-bs-dismiss="modal">Закрыть</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="/services">
+                                        <button type="button" class="order btn">Подробнее</button>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="company">
+            <div class="container">
+                <div class="row">
+                    <div class="title-block">
+                        <h1 class="text-uppercase">О нас</h1>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="company-block">
+                            <p>Компания «Смурфик» оказывает широкий спектр услуг по исполнению строительных работ.</p>
+                            <p>Проекты компании реализованы при полном сопровождении квалифицированных специалистов с внушительным опытом работы.</p>
+                            <p>Мы готовы к реализации проектов любой сложности и специфики, и что самое важное — предоставляем гарантию качества на все выполненные работы.</p>
+                        </div>
+                        <div class="application text-start mb-4">
+                            <a href="/company">
+                                <button type="button" class="btn">Подробнее</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="company-img">
+                            <img src="/pages/img/9.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="container">
+            <div class="advantages row">
+                <div class="title-block">
+                    <h1 class="text-uppercase">Почему выбирают нас</h1>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="advantages-block d-flex align-items-center">
+                        <div class="advantages-img">
+                            <img src="/pages/img/star.svg" alt="star">
+                        </div>
+                        <div class="title-advantages">
+                            <h1 class="text-start">Большой опыт работы</h1>
+                        </div>
+                    </div>
+                    <div class="description-advantages">
+                        <p>Наш богатый опыт позволяет находить самые оптимальные и быстрые решения согласования и выполнения работ.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="advantages-block d-flex align-items-center">
+                        <div class="advantages-img">
+                            <img src="/pages/img/price.svg" alt="star">
+                        </div>
+                        <div class="title-advantages">
+                            <h1 class="text-start">Стоимость</h1>
+                        </div>
+                    </div>
+                    <div class="description-advantages">
+                        <p>Мы точно знаем на чем можно сэкономить и подскажем вам самые лучшие решения. Никаких дополнительных скрытых платежей, все согласно договору.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="advantages-block d-flex align-items-center">
+                        <div class="advantages-img">
+                            <img src="/pages/img/time.svg" alt="star">
+                        </div>
+                        <div class="title-advantages">
+                            <h1 class="text-start">Экономия времени</h1>
+                        </div>
+                    </div>
+                    <div class="description-advantages">
+                        <p>Выполняем полный цикл работ от сбора документов и согласования до постройки и введения в эксплуатацию. С нами Вы сделаете все в разы быстрее, чем будете этим заниматься самостоятельно. Мы делаем все строго в оговоренные сроки, вам не нужно долго ждать и стоять в очередях!</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="advantages-block d-flex align-items-center">
+                        <div class="advantages-img">
+                            <img src="/pages/img/warranty.svg" alt="star">
+                        </div>
+                        <div class="title-advantages">
+                            <h1 class="text-start">Гарантия</h1>
+                        </div>
+                    </div>
+                    <div class="description-advantages">
+                        <p>Мы гарантируем 100% решение вашего вопроса на всех этапах нашего сотрудничества!</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="portfolio row">
+                <div class="title-block">
+                    <h1 class="text-uppercase">Портфолио проектов</h1>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="img-portfolio">
+                        <img src="/pages/img/11.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="img-portfolio">
+                        <img src="/pages/img/12.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="img-portfolio">
+                        <img src="/pages/img/13.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="img-portfolio">
+                        <img src="/pages/img/14.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="img-portfolio">
+                        <img src="/pages/img/15.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="img-portfolio">
+                        <img src="/pages/img/16.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="leave-request">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="title-block">
+                        <h1 class="text-uppercase">Оставьте заявку</h1>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div class="request-input">
+                            <input name="request" type="text" id="orderName" placeholder="Имя">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div class="request-input">
+                            <input type="tel" placeholder="Телефон" id="orderPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="request text-start">
+                            <button type="button" class="btn" onclick="addOrder('Заявка')">Отправить</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12">
+                        <div class="request text-start">
+                            <p>Нажимая «Отправить» вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="about-request">
+            <div class="container">
+                <div class="title-block">
+                    <h1 class="text-uppercase">Обратная связь</h1>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="request-input">
+                            <input name="request" type="text" id="feedbackName" placeholder="Имя">
+                        </div>
+                        <div class="request-input">
+                            <input type="tel" placeholder="Телефон" id="feedbackPhone" aria-invalid="false" pattern="2[0-9]{3}-[0-9]{3}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                        </div>
+                        <div class="request-input">
+                            <input name="request" type="text" id="feedbackQuestion" placeholder="Напишите ваш вопрос">
+                        </div>
+                        <div class="request text-start d-lg-flex d-md-block align-items-center">
+                            <button type="button" class="order btn" onclick="addFeedback()">Отправить</button>
+                            <div class="request text-start">
+                                <p>Нажимая «Отправить» вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-lg-block d-none">
+                        <div class="company-img">
+                            <img src="/pages/img/10.jpg" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+              </div>
+          </div>
+
+          <footer>
+            <div class="footer container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <a class="navbar-brand m-0 text-center" href="/">
+                            <img src="/pages/img/logo.png" alt="logo">
+                            <div class="slogan text-start">
+                                <h1 class="text-uppercase">Смурфик</h1>
+                            </div> 
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="navbar-nav m-auto ">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/company">О нас</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/services">Услуги</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/portfolio">Портфолио</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/feedback">Обратная связь</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/contact">Контакты</a>
+                            </li>
+                          </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="title-block">
+                            <h1 class="text-uppercase text-center">Социальные сети</h1>
+                        </div>
+                        <div class="social-icon">
+                            <div class="icon">
+                                <a href="#">
+                                    <img src="/pages/img/telegram.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="#">
+                                    <img src="/pages/img/discord.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="#">
+                                    <img src="/pages/img/twitch.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <h1 class="text-center">© Copyright, Смурфик 2023.</h1>
+                    </div>
+                </div>
+              </div>
+          </footer>
+    </body>
+    <!--JQuery link-->
+	<script src="/pages/js/jquery.js"></script>
+	<!--Bootstrap JS-->
+	<script src="/pages/js/bootstrap.bundle.min.js"></script>
+	<!--JS-->
+	<script src="/pages/js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            isAuthorized();
+        });
+    </script>
+</html>
